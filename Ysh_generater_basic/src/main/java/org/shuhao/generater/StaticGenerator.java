@@ -22,7 +22,7 @@ public class StaticGenerator {
 
         File parentFile = new File(projectPath).getParentFile();
 
-        String inputPath = new File(projectPath , "Ysh_generater_demo_project/acm")
+        String inputPath = new File(parentFile , "Ysh_generater_demo_project/acm")
                 .getAbsolutePath();
 
         String outputPAth = projectPath;
@@ -45,9 +45,8 @@ public class StaticGenerator {
         File outFile = new File(outputPath);
 
         try {
-
-            copyFilebyRecursive(inputPath,outputPath);
-
+            
+            copyFileByRecursive(inputFile, outFile);
         } catch(Exception e){
 
             System.out.println("文件复制失败");
