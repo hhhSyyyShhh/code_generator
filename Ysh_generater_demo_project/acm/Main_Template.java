@@ -1,0 +1,31 @@
+package Ysh_generater_demo_project.acm;
+
+import java.util.Scanner;
+
+public class Main_Template {
+    public static void main(String[] args) {
+
+        Scanner scanner =new Scanner(System.in);
+
+            while (scanner.hasNext()) {
+
+                // 读取输入元素的个数
+                int n = scanner.nextInt();
+
+                int [] arr = new int[n];
+
+                for (int i = 0; i < n; i++) {
+                    arr[i] =scanner.nextInt();
+                }
+
+                int sum = 0;
+
+                for (int num : arr) {
+
+                    sum += num;
+                }
+                System.out.println("Sum:" + sum);
+            }
+        scanner.close();
+    }
+}
